@@ -17,3 +17,15 @@ logger.Fatal("Sample fatal error message");
 // NLog supports structured messages
 var fruit = new[] { "bananas", "apples", "pears" };
 logger.Info("I like to eat {Fruit}", fruit);
+
+// Example of logging an exception
+try
+{
+    int x = 10;
+    int y = 0;
+    Console.WriteLine(x / y);
+}
+catch (Exception ex)
+{
+    logger.Error(ex.Message);
+}
