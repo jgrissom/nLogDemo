@@ -13,3 +13,7 @@ logger.Info("Sample informational message");
 logger.Warn("Sample warning message");
 logger.Error("Sample error message");
 logger.Fatal("Sample fatal error message");
+
+// NLog supports structured messages
+var fruit = new[] { "bananas", "apples", "pears" };
+logger.Info("I like to eat {Fruit}", fruit);
